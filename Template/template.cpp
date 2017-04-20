@@ -41,6 +41,6 @@ int mult(int a, int b, int p = MOD) {return (ll) a * b % p;}
 int inv(int a, int p = MOD) {return fpow(a, p - 2, p);}
  
 int main() {
-	ios_base::sync_with_stdio(0); cin.tie(0);
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	return 0;
 }
