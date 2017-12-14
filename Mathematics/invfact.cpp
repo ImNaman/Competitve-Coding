@@ -1,7 +1,14 @@
+
+// Naman Shukla
+
 #include <bits/stdc++.h> 
+using namespace std;
+typedef long long ll;
+
 vector<ll> Fact;
 vector<ll> Invfact;
 vector<ll> Inv;
+
  
 //Preprocessing factorial and its inverses in O(p) time.
 void compute(int P)

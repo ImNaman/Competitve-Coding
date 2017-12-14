@@ -2,6 +2,27 @@
 using namespace std;
 typedef long long ll;
 
+//Template 1 p should be prime
+//Template 2 p works for composite too
+
+
+
+//Computes C(N,R) modulo P in O(log(n)) time.
+ll Lucas(ll N,ll R,int P)
+{
+  if(R<0||R>N)
+    return 0;
+  
+  if(R==0||R==N)
+    return 1;
+ 
+  if(N>=P)
+  {
+    return mult(Lucas(N/P,R/P,P),Lucas(N%P,R%P,P));
+  }
+  return mult(Fact[N],mult(Invfact[N-R],Invfact[R]));
+}
+
 // sujeets template for C(n,r)
 ll ncr(ll n,ll r)
 {
@@ -49,20 +70,4 @@ ll ncr(ll n,ll r)
      return (num*modinverse(den))%mod;
    }
  
-}
-
-//Computes C(N,R) modulo P in O(log(n)) time.
-ll Lucas(ll N,ll R,int P)
-{
-  if(R<0||R>N)
-    return 0;
-  
-  if(R==0||R==N)
-    return 1;
- 
-  if(N>=P)
-  {
-    return mult(Lucas(N/P,R/P,P),Lucas(N%P,R%P,P));
-  }
-  return mult(Fact[N],mult(Invfact[N-R],Invfact[R]));
 }

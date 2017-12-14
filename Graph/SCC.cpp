@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+// Naman Shukla
+
+#include <bits/stdc++.h>
 using namespace std;
 //Implementation of Strongly connected components using Kosaraju Algorithm
 

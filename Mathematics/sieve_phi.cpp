@@ -1,3 +1,7 @@
+
+// Compute phi(N) as well as fac[i]
+// num is prime if p[i] = i;
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -13,6 +17,7 @@ void sieve()   // 2853708 computations
 	{
 		if(fac[i]==0)
 		{
+			fac[i] = i;
 			for(int j=i;j<=1e6;j+=i)
 				fac[j]=i,
 				phi[j]=phi[j]*(i-1)/i;

@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+// fibo(N) in log N
+
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 

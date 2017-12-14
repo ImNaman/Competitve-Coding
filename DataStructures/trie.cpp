@@ -1,18 +1,20 @@
+// Naman Shukla
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
 
-truct TrieNode
+truct node
 {
     bool leaf;
-    unordered_map<char, TrieNode*> chd; 
+    unordered_map<char, node*> chd; 
     
-    TrieNode() : leaf(false) { }
+    node() : leaf(false) { }
 };
 
-TrieNode *root;
+node *root;
 
-void insert(TrieNode* x, string s, int pos)
+void insert(node* x, string s, int pos)
 {
     if (pos == s.length()) x -> leaf = true;
     else
@@ -20,13 +22,13 @@ void insert(TrieNode* x, string s, int pos)
         char cur = s[pos];
         if (x -> chd[cur] == NULL)
         {
-            x -> chd[cur] = new TrieNode();
+            x -> chd[cur] = new node();
         }
         insert(x -> chd[cur], s, pos + 1);
     }
 }
 
-bool find(TrieNode* x, string s, int pos)
+bool find(node* x, string s, int pos)
 {
     if (pos == s.length()) return (x -> leaf);
     if (x -> chd[s[pos]] == NULL) return false;

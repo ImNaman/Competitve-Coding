@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+// 2D template
+
+#include <bits/stdc++.h>
 #define SZ(a) (int)(a.size())
 using namespace std;
 #define pb push_back

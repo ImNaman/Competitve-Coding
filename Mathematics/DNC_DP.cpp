@@ -1,3 +1,5 @@
+// Divide and Conquer DP
+
 ll A[N],DP[K][N],cost[N][N];
 int k; 
 void solve(int l,int r,int L,int R)

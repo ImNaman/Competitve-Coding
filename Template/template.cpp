@@ -1,6 +1,5 @@
 // Naman Shukla
 
-
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -42,5 +41,6 @@ int inv(int a, int p = MOD) {return fpow(a, p - 2, p);}
  
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
 	return 0;
 }
