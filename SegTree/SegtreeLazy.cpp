@@ -4,12 +4,15 @@
 #include "bits/stdc++.h"
 using namespace std;
 typedef long long int ll;
+
 ll tree[400005],lazy[400005],A[100005];
+
 void build(ll node, ll start, ll end)
 {
     if(start == end)
+    {
         tree[node] = A[start];
-    
+    }
     else
     {
         ll mid = (start + end) / 2;

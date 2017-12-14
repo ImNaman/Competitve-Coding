@@ -1,6 +1,3 @@
-// Naman Shukla
-// Template has't been tested
-
 #include <bits/stdc++.h>
 using namespace std;
 typedef int ll;
