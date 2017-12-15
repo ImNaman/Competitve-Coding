@@ -19,7 +19,7 @@ ll gcd(ll a, ll b) {ll r; while (b) {r = a % b; a = b; b = r;} return a;}  // co
 ll lcm(ll a, ll b) {return a / gcd(a, b) * b;}	// computes lcm(a,b)
 
 // returns d = gcd(a,b); finds x,y such that d = ax + by
-ll extended_euclid(ll a, ll b, ll &x, ll &y) 
+ll extended_euclid(ll a, ll b, ll x, ll y) 
 {
 	ll xx = y = 0;
 	ll yy = x = 1;
@@ -69,6 +69,20 @@ void linear_diophantine(ll a, ll b, ll c, ll &x, ll &y)
 	}
 }
 
+// Function to find modulo inverse of a number in log(m)
+ll modInverse(ll a, ll m)
+{
+    ll x, y;
+    ll g = extended_euclid(a, m, x, y);
+    if (g != 1)
+        return -1; // Inverse mod doesn't exist
+
+    ll res = (x%m + m) % m;
+    return res;
+}
+ 
+
+ 
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	return 0;
